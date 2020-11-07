@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://https://happycg.herokuapp.com',
+    baseURL: 'http://happycg.herokuapp.com',
 })
 
 export default api;
