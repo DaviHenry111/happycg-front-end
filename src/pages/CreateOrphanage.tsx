@@ -48,7 +48,7 @@ const history = useHistory()
     const selectedImages = Array.from(event.target.files)
 
     images.map(image => {
-        if (selectedImages[2].name !== image.name){
+        if (selectedImages[0].name !== image.name){
         selectedImages.push(image)}
     })
 
