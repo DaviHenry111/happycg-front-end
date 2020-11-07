@@ -1,6 +1,6 @@
 import React, { useState, FormEvent, ChangeEvent } from "react";
 import { Map, Marker, TileLayer } from 'react-leaflet';
-import L from 'leaflet';
+
 import { LeafletMouseEvent } from 'leaflet'
 
 import { FiPlus } from "react-icons/fi";
@@ -41,14 +41,14 @@ const history = useHistory()
   }
 
   function handleSelectImages(event: ChangeEvent<HTMLInputElement>) {
-    if (!event.target.files || event.target.files.length == 0) {
+    if (!event.target.files || event.target.files.length === 0) {
       return;
     }
 
     const selectedImages = Array.from(event.target.files)
 
     images.map(image => {
-        if (selectedImages[0].name != image.name){
+        if (selectedImages[0].name !== image.name){
         selectedImages.push(image)}
     })
 
@@ -109,7 +109,7 @@ const history = useHistory()
 
 <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-               { position.latitude != 0 
+               { position.latitude !== 0 
                && <Marker interactive={false} icon={mapIcon} position={[position.latitude,position.longitude]} />  }
             </Map>
 
